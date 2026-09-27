@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://by5ifpawdcl4n" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/background 2.png" id="4_5vw27"]
 [ext_resource type="Texture2D" uid="uid://wu564bnjtuhp" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 4/background 4.png" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://cl5eaekxll7ek" path="res://tree.tscn" id="6_7mycd"]
+[ext_resource type="FontFile" uid="uid://crkwh5s2u637m" path="res://sketch/Sketch.ttf" id="7_5vw27"]
+[ext_resource type="AudioStream" uid="uid://85rfd53mlexn" path="res://alex-morgan-autumn-leaves-falling-517092.mp3" id="7_272bh"]
+
+[sub_resource type="SystemFont" id="SystemFont_4c57u"]
+fallbacks = Array[Font]([ExtResource("7_5vw27")])
 
 [node name="MAIN" type="Node2D" unique_id=783453087]
 script = ExtResource("1_lquwl")
@@ -23,7 +28,15 @@ autostart = true
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=472101082]
 
 [node name="score" type="Label" parent="CanvasGroup" unique_id=1937319758]
-offset_right = 59.0
-offset_bottom = 23.0
+offset_right = 598.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5890214, 0.23970374, 0.110411145, 1)
+theme_override_fonts/font = SubResource("SystemFont_4c57u")
+theme_override_font_sizes/font_size = 32
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1856965269]
+stream = ExtResource("7_272bh")
+volume_db = -0.035
 
 [connection signal="timeout" from="leafspaner" to="." method="_on_leafspaner_timeout"]

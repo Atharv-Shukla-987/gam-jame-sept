@@ -8,12 +8,15 @@ extends Node2D
 
 func _ready():
 	sprite_2d.texture = small
+	
 	Gamemanager.score_changed.connect(update_tree)
 
 func update_tree():
-	if Gamemanager.score >= 15:
+	if Gamemanager.score >=30:
 		sprite_2d.texture = big
-	elif Gamemanager.score >= 6:
+		
+	elif Gamemanager.score >= 10:
 		sprite_2d.texture = medium
+		
 	else:
 		sprite_2d.texture = small

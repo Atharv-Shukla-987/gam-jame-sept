@@ -1,11 +1,13 @@
 extends Node2D
 
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var bg :Array[Texture2D] = []
 
 func _ready() -> void:
+	audio_stream_player_2d.play()
 	sprite_2d.texture = bg.pick_random()
 	var viewportsize = get_viewport_rect().size
 	sprite_2d.position=viewportsize /2

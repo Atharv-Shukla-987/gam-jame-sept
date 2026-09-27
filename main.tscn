@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bt8l2dwbhuoav" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 1/background 1.png" id="2_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bkdap5nlvcgi0" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 3/background 3.png" id="3_272bh"]
+[ext_resource type="Texture2D" uid="uid://by5ifpawdcl4n" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/background 2.png" id="4_5vw27"]
+[ext_resource type="Texture2D" uid="uid://wu564bnjtuhp" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 4/background 4.png" id="5_kek77"]
+
 [node name="MAIN" type="Node2D" unique_id=783453087]
+script = ExtResource("1_lquwl")
+bg = Array[Texture2D]([ExtResource("2_7mycd"), ExtResource("3_272bh"), ExtResource("4_5vw27"), ExtResource("5_kek77")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=399607181]

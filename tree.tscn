@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://cl5eaekxll7ek"]
 
-[ext_resource type="Texture2D" uid="uid://bjg3gq7tl5f01" path="res://tree1.png" id="1_brfkd"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8vbdi"]
-atlas = ExtResource("1_brfkd")
-region = Rect2(0, 0, 126.00008, 129.00003)
+[ext_resource type="Script" uid="uid://cmo6qqjr2ok21" path="res://tree.gd" id="1_nnvrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbdi"]
 size = Vector2(50, 46)
@@ -13,7 +9,7 @@ size = Vector2(50, 46)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2083957731]
 position = Vector2(87, -65)
-texture = SubResource("AtlasTexture_8vbdi")
+script = ExtResource("1_nnvrw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=573304129]
 

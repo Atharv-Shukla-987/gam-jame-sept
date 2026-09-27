@@ -1,5 +1,22 @@
 [gd_scene format=3 uid="uid://cv74w5igteoxc"]
 
+[ext_resource type="Texture2D" uid="uid://po1f5jctg2mm" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/Plan-6.png" id="1_3pujl"]
+[ext_resource type="Script" uid="uid://c0miiegi4srkk" path="res://mainmenu.gd" id="1_7uvds"]
+[ext_resource type="Texture2D" uid="uid://lq6wiqehy7b6" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/Plan-4.png" id="2_7uvds"]
+[ext_resource type="Texture2D" uid="uid://dyfyc3dvyuswq" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/Plan-2.png" id="3_at6rn"]
+[ext_resource type="Texture2D" uid="uid://d4huasantsout" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/Plan-3.png" id="4_dihg0"]
+[ext_resource type="FontFile" uid="uid://dyhxeb7chwegw" path="res://sketch/Montague.ttf" id="5_rqglp"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3pujl"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fbd8b"]
+light_mode = 1
+
+[sub_resource type="FontVariation" id="FontVariation_q5f00"]
+fallbacks = Array[Font]([null])
+base_font = ExtResource("5_rqglp")
+
 [node name="MAINMENU" type="Control" unique_id=207293882]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +24,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7uvds")
+
+[node name="Node" type="Node" parent="." unique_id=1159917110]
+
+[node name="Plan6" type="Sprite2D" parent="Node" unique_id=631386227]
+position = Vector2(577.24994, 324.75)
+scale = Vector2(2.002604, 1.9953703)
+texture = ExtResource("1_3pujl")
+
+[node name="Plan7" type="Sprite2D" parent="Node" unique_id=2145207911]
+position = Vector2(577.24994, 324.75)
+scale = Vector2(2.002604, 1.9953703)
+texture = ExtResource("2_7uvds")
+
+[node name="Plan9" type="Sprite2D" parent="Node" unique_id=1035616101]
+position = Vector2(577.24994, 324.75)
+scale = Vector2(2.002604, 1.9953703)
+texture = ExtResource("3_at6rn")
+
+[node name="Plan8" type="Sprite2D" parent="Node" unique_id=1121610212]
+position = Vector2(577.24994, 324.75)
+scale = Vector2(2.002604, 1.9953703)
+texture = ExtResource("4_dihg0")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Node" unique_id=1601540388]
+z_index = -1
+color = Color(0.26657534, 0.26657513, 0.26657513, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1714952797]
+z_index = 4
+material = SubResource("CanvasItemMaterial_3pujl")
+layout_mode = 0
+offset_left = 457.0
+offset_top = 301.0
+offset_right = 694.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(0.88, 0.30800003, 0.30800003, 1)
+theme_override_fonts/font = ExtResource("5_rqglp")
+theme_override_font_sizes/font_size = 57
+text = "START"
+flat = true
+
+[node name="Label" type="Label" parent="." unique_id=928774002]
+z_index = 5
+material = SubResource("CanvasItemMaterial_fbd8b")
+layout_mode = 0
+offset_left = 385.0
+offset_top = 121.0
+offset_right = 850.0
+offset_bottom = 293.0
+theme_override_colors/font_color = Color(0.68286353, 0.316804, 0.08907994, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_q5f00")
+theme_override_font_sizes/font_size = 64
+text = "AUTUMN FALL
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

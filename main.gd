@@ -28,5 +28,9 @@ func _on_leaf_spawner_timeout() -> void:
 	add_child(leaf)
 
 
+
 func _on_leafspaner_timeout() -> void:
-	pass # Replace with function body.
+	var leaf = preload("res://leaf.tscn").instantiate()
+	leaf.position = Vector2(randf_range(50,get_viewport_rect().size.x -50),-30)
+	add_child(leaf)
+	print("leaf",leaf.position)

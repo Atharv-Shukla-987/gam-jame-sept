@@ -15,9 +15,11 @@ bg = Array[Texture2D]([ExtResource("2_7mycd"), ExtResource("3_272bh"), ExtResour
 position = Vector2(354, 645)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=399607181]
+visible = false
 z_index = -5
 
 [node name="leafspaner" type="Timer" parent="." unique_id=738273766]
+autostart = true
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=472101082]
 
@@ -28,3 +30,5 @@ offset_bottom = 23.0
 [node name="HLT" type="Label" parent="CanvasGroup" unique_id=262545286]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="timeout" from="leafspaner" to="." method="_on_leafspaner_timeout"]

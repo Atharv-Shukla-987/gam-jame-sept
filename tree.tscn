@@ -8,20 +8,31 @@
 atlas = ExtResource("2_gvmkm")
 region = Rect2(0, 0, 130, 127)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("2_gvmkm")
+region = Rect2(-1.01, 260, 130, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("2_gvmkm")
+region = Rect2(256.17944, 255.28201, 130, 127)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbdi"]
-size = Vector2(50, 46)
+size = Vector2(146, 109)
 
 [node name="Tree" type="Node2D" unique_id=395815981]
 script = ExtResource("1_nnvrw")
 small = SubResource("AtlasTexture_nnvrw")
+medium = SubResource("AtlasTexture_7mycd")
+big = SubResource("AtlasTexture_272bh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2083957731]
 position = Vector2(213, -147.75)
 scale = Vector2(2.9384615, 2.3031497)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=573304129]
+position = Vector2(-210, 0)
 script = ExtResource("2_nnvrw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=809983677]
-position = Vector2(210, -23)
+position = Vector2(421, -54.5)
 shape = SubResource("RectangleShape2D_8vbdi")

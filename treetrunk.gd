@@ -1,7 +1,9 @@
 extends Area2D
 
 
-var catchradius = 40.0
-
+\
 func _ready() -> void:
-	add_to_group("tree_target")
+	add_to_group("trunk_target")
+	
+func leafinside(leaf) -> bool:
+	return get_overlapping_areas().has(leaf)

@@ -17,7 +17,7 @@ func _process(delta):
 	else:
 		global_position.y += spd * delta
 		if global_position.y > get_viewport_rect().size.y + 50:
-			Gamemanager.lose_health()
+			
 			queue_free()
 
 func _on_input_event(_viewport, event, _shape_idx):
@@ -26,6 +26,6 @@ func _on_input_event(_viewport, event, _shape_idx):
 
 func check_drop():
 	var trunk = get_tree().get_first_node_in_group("trunk_target")
-	if trunk and global_position.distance_to(trunk.global_position) < trunk.catch_radius:
+	if trunk and trunk.leafinside(self):
 		Gamemanager.add_score(1)
 		queue_free()

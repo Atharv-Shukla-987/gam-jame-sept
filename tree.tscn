@@ -29,10 +29,13 @@ big = SubResource("AtlasTexture_272bh")
 position = Vector2(213, -147.75)
 scale = Vector2(2.9384615, 2.3031497)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=573304129]
-position = Vector2(-210, 0)
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=573304129]
+position = Vector2(-143.95288, 64.151276)
+scale = Vector2(0.34031412, 0.434188)
 script = ExtResource("2_nnvrw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=809983677]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=809983677]
 position = Vector2(421, -54.5)
 shape = SubResource("RectangleShape2D_8vbdi")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_area_entered"]

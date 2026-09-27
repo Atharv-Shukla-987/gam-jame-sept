@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qgvdh"]
 radius = 13.0
 
-[node name="leaf" type="Area2D" unique_id=950881702]
+[node name="leaf" type="Area2D" unique_id=950881702 groups=["leaf"]]
 script = ExtResource("1_p3lty")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1600876059]

@@ -5,9 +5,26 @@
 [ext_resource type="Texture2D" uid="uid://bkdap5nlvcgi0" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 3/background 3.png" id="3_272bh"]
 [ext_resource type="Texture2D" uid="uid://by5ifpawdcl4n" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/background 2.png" id="4_5vw27"]
 [ext_resource type="Texture2D" uid="uid://wu564bnjtuhp" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 4/background 4.png" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://cl5eaekxll7ek" path="res://tree.tscn" id="6_7mycd"]
 
 [node name="MAIN" type="Node2D" unique_id=783453087]
 script = ExtResource("1_lquwl")
 bg = Array[Texture2D]([ExtResource("2_7mycd"), ExtResource("3_272bh"), ExtResource("4_5vw27"), ExtResource("5_kek77")])
 
+[node name="Tree" parent="." unique_id=395815981 instance=ExtResource("6_7mycd")]
+position = Vector2(354, 645)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=399607181]
+z_index = -5
+
+[node name="leafspaner" type="Timer" parent="." unique_id=738273766]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=472101082]
+
+[node name="score" type="Label" parent="CanvasGroup" unique_id=1937319758]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HLT" type="Label" parent="CanvasGroup" unique_id=262545286]
+offset_right = 40.0
+offset_bottom = 23.0
